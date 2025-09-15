@@ -38,3 +38,10 @@ let tailleMetre = 1.68;
 let IMC = poidsKilo/ (tailleMetre*tailleMetre);
 
 console.log("L'IMC de cette personne est de : " + IMC.toFixed(2));
+
+//Exercice 7
+const montMinComm = 25;
+let montTotal = 50;
+
+montTotal >= montMinComm ? console.log("Livraison Gratuite !!") : console.log("Frais de livraison : 5.5 euros");
+
