@@ -66,12 +66,19 @@ const personnes = [
     {prenom: "Jane", nom: "Doe", age: 30, ville: "Paris"},
     {prenom: "Jim", nom: "Doe", age: 35, ville: "Caen"}
 ]
-
+/*
 console.log(personnes);
 console.table(personnes);
-
+*/
 //Exercice 3
 personnes.push({prenom: " Marc", nom: "Doe", age: 32, ville: "Marseille"})
+/*
+console.log(personnes);
+console.table(personnes);
+*/
+//Exercice 4
+personnes[0].prenom = "Jean";
+personnes.splice(1, 1);
 
 console.log(personnes);
 console.table(personnes);
