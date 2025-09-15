@@ -25,4 +25,16 @@ let prixHT = 100;
 const TVA = 0.2;
 let prixTTC = prixHT + prixHT*TVA;
 
-console.log("Prix HT : " + prixHT + ", TVA actuelle : " + TVA + " et prix TTC" + prixTTC);
+console.log("Prix HT : " + prixHT + "€, TVA actuelle : " + TVA + " et prix TTC : " + prixTTC + "€");
+
+//Exercice 5
+let enigme = ((4 >= 6) || ("herbe" != "verte")) && !(((12 * 2) == 144) && true)
+//C'est true
+console.log(enigme);
+
+//Exercice 6
+let poidsKilo = 52.6;
+let tailleMetre = 1.68;
+let IMC = poidsKilo/ (tailleMetre*tailleMetre);
+
+console.log("L'IMC de cette personne est de : " + IMC.toFixed(2));
