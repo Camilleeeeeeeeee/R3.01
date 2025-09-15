@@ -63,3 +63,13 @@ console.log("Le prénom de ma personne : " + personne.prenom);
 console.log("Le nom de ma personne : " + personne.nom);
 console.log("L'âge de ma personne : " + personne.age);
 console.log("La ville de ma personne : " + personne.ville);
+
+//Exercice 2
+const personnes = [
+    {prenom: "John", nom: "Doe", age: 25, ville: "Rouen"},
+    {prenom: "Jane", nom: "Doe", age: 30, ville: "Paris"},
+    {prenom: "Jim", nom: "Doe", age: 35, ville: "Caen"}
+]
+
+console.log(personnes);
+console.table(personnes);
