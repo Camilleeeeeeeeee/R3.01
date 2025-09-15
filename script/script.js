@@ -89,3 +89,9 @@ let nombre = [
 ]
 
 console.log("Premier nombre : " + nombre[0] + ", dernier nombre : " + nombre[9] + " et la longueur du tableau : "+ nombre.length);
+
+//Exercice 6
+let parDix = [10,20,30,40,50,60,70,80,90,100];
+
+console.log(parDix);
+console.log(parDix.reverse());
