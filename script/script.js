@@ -45,3 +45,7 @@ let montTotal = 50;
 
 montTotal >= montMinComm ? console.log("Livraison Gratuite !!") : console.log("Frais de livraison : 5.5 euros");
 
+//Exercice 8
+let BinaireString = "1010";
+
+console.log("Nombre binaire : " + BinaireString + ", converti : " + parseInt(BinaireString,2));
