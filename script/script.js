@@ -49,3 +49,17 @@ montTotal >= montMinComm ? console.log("Livraison Gratuite !!") : console.log("F
 let BinaireString = "1010";
 
 console.log("Nombre binaire : " + BinaireString + ", converti : " + parseInt(BinaireString,2));
+
+//PARTIE 2
+//Exercice 1
+const personne = {
+    prenom : "Camille",
+    nom : "Golliot",
+    age : 20,
+    ville : "Caen"
+};
+
+console.log("Le prénom de ma personne : " + personne.prenom);
+console.log("Le nom de ma personne : " + personne.nom);
+console.log("L'âge de ma personne : " + personne.age);
+console.log("La ville de ma personne : " + personne.ville);
