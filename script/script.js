@@ -82,3 +82,10 @@ personnes.splice(1, 1);
 
 console.log(personnes);
 console.table(personnes);
+
+//Exercice 5
+let nombre = [
+    1,2,3,4,5,6,7,8,9,0
+]
+
+console.log("Premier nombre : " + nombre[0] + ", dernier nombre : " + nombre[9] + " et la longueur du tableau : "+ nombre.length);
