@@ -1,26 +1,22 @@
 //Exercice 1
-
 let degreC = 22;
 let degreF = degreC * 9/5 + 32;
 
 console.log("Température en degrés : " + degreC + ", et température en Fahrenheit : " + degreF);
 
 //Exercice 2
-
 let longueur = 5;
 let largeur = 4;
 
 console.log("L'aire du rectangle (longueur x largeur) : " + largeur*longueur);
 
 //Exercice 3
-
 let prenom = "Camille";
 let nom = "Golliot";
 
 console.log("Je m'appelle est : " + prenom + " " + nom);
 
 //Exercice 4
-
 let prixHT = 100;
 const TVA = 0.2;
 let prixTTC = prixHT + prixHT*TVA;
@@ -70,6 +66,12 @@ const personnes = [
     {prenom: "Jane", nom: "Doe", age: 30, ville: "Paris"},
     {prenom: "Jim", nom: "Doe", age: 35, ville: "Caen"}
 ]
+
+console.log(personnes);
+console.table(personnes);
+
+//Exercice 3
+personnes.push({prenom: " Marc", nom: "Doe", age: 32, ville: "Marseille"})
 
 console.log(personnes);
 console.table(personnes);
