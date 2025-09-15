@@ -18,3 +18,11 @@ let prenom = "Camille";
 let nom = "Golliot";
 
 console.log("Je m'appelle est : " + prenom + " " + nom);
+
+//Exercice 4
+
+let prixHT = 100;
+const TVA = 0.2;
+let prixTTC = prixHT + prixHT*TVA;
+
+console.log("Prix HT : " + prixHT + ", TVA actuelle : " + TVA + " et prix TTC" + prixTTC);
