@@ -95,3 +95,11 @@ let parDix = [10,20,30,40,50,60,70,80,90,100];
 
 console.log(parDix);
 console.log(parDix.reverse());
+
+//Exercice 7
+let number = [2,5,1,9,0,3,7,4,6,8]
+
+console.table(number);
+console.table(number.sort());
+
+//Exercice 8
