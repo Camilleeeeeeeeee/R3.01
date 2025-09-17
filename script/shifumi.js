@@ -1,12 +1,21 @@
 let button = document.querySelectorAll('.choice');
 const result = document.getElementById('result');
+const labelDraw = document.getElementById('draw');
+const labelWin = document.getElementById('win');
+const labelLoose = document.getElementById('loose');
 const choices = ["Pierre", "Feuille", "Ciseaux"];
 const score =  {win: 0, loose : 0, draw : 0};
 
+
 function majResult(){
-    labelwin.textContent = "Number of wins : " + win;
-    labelloose.textContent = "Number of looses : " + loose;
-    labeldraw.textContent = "Number of draws : " + draw;
+    labelWin.textContent = "Number of wins : " + score.win;
+    labelLoose.textContent = "Number of looses : " + score.loose;
+    labelDraw.textContent = "Number of draws : " + score.draw;
+}
+
+function reset(){
+    button.addEventListener( 'click', () => {
+    }
 }
 
 button.forEach(button => {
@@ -19,23 +28,21 @@ button.forEach(button => {
         console.log(playerChoice);
         console.log(robotChoice);
 
-        if(playerChoice == robotChoice){
-            resultNow = "draw"
-            draw++;
+        if(playerChoice === robotChoice){
+            resultNow = 'draw'
         }
 
-        if(playerChoice == "Pierre" && robotChoice == "Ciseaux" ||
-            playerChoice == "Feuille" && robotChoice == "Pierre" ||
-            playerChoice == "Ciseaux" && robotChoice == "Feuille"){
-                resultNow = "win"
-                win++;
+        else if(playerChoice === "Pierre" && robotChoice == "Ciseaux" ||
+            playerChoice === "Feuille" && robotChoice == "Pierre" ||
+            playerChoice === "Ciseaux" && robotChoice == "Feuille"){
+                resultNow = 'win'
         }
         else{
-            resultNow = "loose"
-            loose++;
+            resultNow = 'loose'
+            
         }
 
-        score[result]++;
+        score[resultNow]++;
         majResult();
 
         result.innerHTML = `I play : ${playerChoice}<br>The robot plays : ${robotChoice}<br>It's a <strong>${resultNow === 'draw' ? 'Draw !!' : resultNow === 'win' ? 'Win !!' : 'Looser AHAH !!'}</strong>`;
