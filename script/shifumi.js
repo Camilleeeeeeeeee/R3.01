@@ -1,9 +1,7 @@
 let button = document.querySelectorAll('.choice');
 const result = document.getElementById('result');
 const choices = ["Pierre", "Feuille", "Ciseaux"];
-let win = 0;
-let loose = 0;
-let draw = 0;
+const score =  {win: 0, loose : 0, draw : 0};
 
 function majResult(){
     labelwin.textContent = "Number of wins : " + win;
@@ -24,7 +22,6 @@ button.forEach(button => {
         if(playerChoice == robotChoice){
             resultNow = "draw"
             draw++;
-            majResult();
         }
 
         if(playerChoice == "Pierre" && robotChoice == "Ciseaux" ||
@@ -32,13 +29,14 @@ button.forEach(button => {
             playerChoice == "Ciseaux" && robotChoice == "Feuille"){
                 resultNow = "win"
                 win++;
-                majResult();
         }
         else{
             resultNow = "loose"
             loose++;
-            majResult();
         }
+
+        score[result]++;
+        majResult();
 
         result.innerHTML = `I play : ${playerChoice}<br>The robot plays : ${robotChoice}<br>It's a <strong>${resultNow === 'draw' ? 'Draw !!' : resultNow === 'win' ? 'Win !!' : 'Looser AHAH !!'}</strong>`;
     
