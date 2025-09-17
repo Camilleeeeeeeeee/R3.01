@@ -1,0 +1,133 @@
+/* Styles généraux */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('../images/arcane.jpg'); /* Chemin vers ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #090735;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+    
+header {
+    position: relative;
+    background-color: rgba(75, 108, 183, 0.6);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+}
+
+header .jinx {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.choice {
+    background-color: #5247c8;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    background-color: #4b6cb7;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Score */
+#win, #loose, #draw {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#result {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #090735;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .choice {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    80% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Bouton reset */
+#reset {
+    background-color: #ffffff;
+    color: #090735;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Rebond au survol */
+#reset:hover {
+    background-color: #ffffff;
+    color : #090735;
+    animation: bounce 0.5s;
+}
