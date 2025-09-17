@@ -1,22 +1,11 @@
-let button = document.querySelectorAll('.choice');
+const button = document.querySelectorAll('.choice');
 const result = document.getElementById('result');
 const labelDraw = document.getElementById('draw');
 const labelWin = document.getElementById('win');
 const labelLoose = document.getElementById('loose');
 const choices = ["Pierre", "Feuille", "Ciseaux"];
 const score =  {win: 0, loose : 0, draw : 0};
-
-
-function majResult(){
-    labelWin.textContent = "Number of wins : " + score.win;
-    labelLoose.textContent = "Number of looses : " + score.loose;
-    labelDraw.textContent = "Number of draws : " + score.draw;
-}
-
-function reset(){
-    button.addEventListener( 'click', () => {
-    }
-}
+const reset = document.getElementById('reset');
 
 button.forEach(button => {
     button.addEventListener( 'click', () => {
@@ -39,7 +28,6 @@ button.forEach(button => {
         }
         else{
             resultNow = 'loose'
-            
         }
 
         score[resultNow]++;
@@ -48,4 +36,18 @@ button.forEach(button => {
         result.innerHTML = `I play : ${playerChoice}<br>The robot plays : ${robotChoice}<br>It's a <strong>${resultNow === 'draw' ? 'Draw !!' : resultNow === 'win' ? 'Win !!' : 'Looser AHAH !!'}</strong>`;
     
     });
+});
+
+function majResult(){
+    labelWin.textContent = "Number of wins : " + score.win;
+    labelLoose.textContent = "Number of looses : " + score.loose;
+    labelDraw.textContent = "Number of draws : " + score.draw;
+}
+
+reset.addEventListener( 'click', () => {
+    score.win = 0;
+    score.loose = 0;
+    score.draw = 0;
+    majResult();
+    result.innerHTML = '';
 });
